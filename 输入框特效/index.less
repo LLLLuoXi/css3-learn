@@ -1,0 +1,27 @@
+div {
+    position: relative;
+    display: inline-block;
+  }
+
+input {
+    outline: none;
+    border: none;
+    background: #fafafa;
+}
+
+input ~ span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #262626;
+    transform: scaleX(0);  //为了避免回流重绘，通过scaleX来实现宽度变化的视觉效果。
+    transform-origin: right center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  input:focus ~ span {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }

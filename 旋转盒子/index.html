@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./index.css">
+
+<body>
+    <input type="checkbox" id="zoom-cube">
+    <input type="radio" name="cube-controller" id="show-front" checked>
+    <input type="radio" name="cube-controller" id="show-back">
+    <input type="radio" name="cube-controller" id="show-top">
+    <input type="radio" name="cube-controller" id="show-bottom">
+    <input type="radio" name="cube-controller" id="show-left">
+    <input type="radio" name="cube-controller" id="show-right">
+    <div class="cube-wrap">
+        <div class="cube">
+            <div class="cube-face cube-face-front"><i>Front</i></div>
+            <div class="cube-face cube-face-back"><i>Back</i></div>
+            <div class="cube-face cube-face-top"><i>Top</i></div>
+            <div class="cube-face cube-face-left"><i>Left</i></div>
+            <div class="cube-face cube-face-right"><i>Right</i></div>
+            <div class="cube-face cube-face-bottom"><i>BOttom</i></div>
+        </div>
+    </div>
+    <div class="button-wrap">
+        <label class="for-front" for="show-front">Front</label>
+        <label class="for-back" for="show-back">Back</label>
+        <label class="for-top" for="show-top">Top</label>
+        <label class="for-bottom" for="show-bottom">Bottom</label>
+        <label class="for-left" for="show-left">Left</label>
+        <label class="for-right" for="show-right">Right</label>
+        <label class="for-zoom-cube" for="zoom-cube">Zoom</label>
+    </div>
+</body>
+
+</html>

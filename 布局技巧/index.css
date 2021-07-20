@@ -1,0 +1,60 @@
+.parent{
+    border: 1px solid gray;
+}
+
+/* .child {
+    display: inline-block;
+    
+}
+
+.parent {
+    text-align: center;
+} */
+
+/* .child{
+    display: table;   
+    margin: 0 auto;  
+} */
+
+/* .parent{
+    position: relative;
+}
+.child{
+    position: absolute;   
+    transform: translateX(-50%);  
+    left: 50%;
+} */
+
+/* .parent{
+    display: flex;
+    justify-content: center;
+} */
+
+/* .parent{
+    display: flex;
+}
+.child{
+    margin: 0 auto;
+} */
+
+/* .parent{
+    display: table-cell;  
+    vertical-align: middle; //
+} */
+
+/* .left{
+    width: 100px;
+    float: left;
+}
+.right{
+    margin-left: 120px;
+} */
+
+.left{
+    width: 100px;
+    float: left;
+}
+.right{
+    margin-left: 20px;
+    overflow: hidden;
+}

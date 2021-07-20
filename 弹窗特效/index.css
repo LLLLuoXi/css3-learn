@@ -1,0 +1,76 @@
+.clear {
+    clear: both;
+}
+
+p {
+    margin: 0;
+}
+
+.marks {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+
+.popup,
+.popup2,
+.popup3 {
+    width: 300px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    margin-left: -150px;
+    background-color: #fff;
+    /* display: none; */
+    animation: shake 1s;
+}
+
+.popup2 {
+    animation: mymove 1s;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+    }
+}
+
+@keyframes mymove {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes contentSlipToBottom {
+    0% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}

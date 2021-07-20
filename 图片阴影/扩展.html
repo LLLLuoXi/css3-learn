@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .shadowedImage {
+            position: relative;
+        }
+
+        .shadowedImage::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: inherit;
+            background-position: center center;
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.50)) blur(20px);
+            z-index: -1;
+
+            /* animation time! */
+            animation: oscillate 1s cubic-bezier(.17, .67, .45, 1.32) infinite alternate;
+        }
+
+        @keyframes oscillate {
+            from {
+                transform: scale(1, 1);
+            }
+
+            to {
+                transform: scale(1.1, 1.1);
+            }
+        }
+
+        .shadowedImage {
+            margin: 100px;
+            width: var(--data-width);
+            height: var(--data-height);
+            max-height: 150px;
+            background-image: var(--data-image);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 伪元素允许我们使用 CSS 来完成一些历史上属于 HTML 和 JavaScript 领域的元素创建任务。对于我们多彩而智能的阴影，我们能够依靠父元素来设置背景图像。这使我们能够轻松定义一个既继承了父元素的背景图像细节，又允许我们为其设置一系列属性以实现模糊和阴影效果的子伪元素。虽然所有这些都很好，并且我们最大限度地减少了大量复制和粘贴，但这种方法不是很灵活。
+
+如果我想将这样的阴影应用到一个不只是带有背景图像的空元素上怎么办？如果我有一个像 Button 或 ComboBox 这样的 HTML 元素想要应用这种阴影效果怎么办？一种解决方案是依靠 JavaScript 在 DOM 中复制适当的元素，将它们放置在前景元素下方，应用过滤器，然后就可以了。虽然这有效，但考虑到该过程的复杂程度，实在是有些不寒而栗。太糟糕了，JavaScript 没有等效的 renderTargetBitmap 这种能够把我们的视觉效果渲染成位图，然后你可以做任何你想做的事的 API…… 🥶
+
+以上内容为译文翻译，下面为一些拓展 -->
+    <div class="parent">
+        <div class="shadowedImage"
+            style="--data-width: 164px; --data-height: 48px; --data-image: url('https://sf3-scmcdn2-tos.pstatp.com/xitu_juejin_web/dcec27cc6ece0eb5bb217e62e6bec104.svg');">
+        </div>
+        <div class="shadowedImage"
+            style="--data-width: 164px; --data-height: 164px; --data-image: url('https://sf1-dycdn-tos.pstatp.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image');">
+        </div>
+        <div class="shadowedImage"
+            style="--data-width: 164px; --data-height: 164px; --data-image: url('https://sf1-ttcdn-tos.pstatp.com/img/bytedance-cn/4bcac7e2843bd01c3158dcaefda77ada~noop.image');">
+        </div>
+    </div>
+</body>
+
+</html>
