@@ -1,0 +1,22 @@
+.fullscreen-layout {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+}
+.fullscreen-layout header {
+  height: 50px;
+  background-color: #f66;
+}
+.fullscreen-layout footer {
+  height: 50px;
+  background-color: #66f;
+}
+.fullscreen-layout main {
+  flex: 1;
+  background-color: #3c9;
+}
+.fullscreen-layout main div {
+  overflow: hidden;
+  height: 100%;
+}

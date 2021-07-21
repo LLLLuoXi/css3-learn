@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../reset.css">
+<link rel="stylesheet" href="./index.css">
+
+<body>
+    <!-- :empty作用于无子节点的节点，该子节点也包括行内匿名盒(单独的文本内容)。以下三种情况均视为非空状态，若不出现这三种状态则视为空状态，此时:empty才会触发。
+ 仅存在节点：<div><p>CSS</p></div>
+ 仅存在文本：<div>CSS</div>
+ 同时存在节点和文本：<div>Hello <p>CSS</p></div>
+ -->
+
+    <ul class="empty-layout">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+    <ul class="empty-layout"></ul>
+
+        
+
+</body>
+
+
+</html>
+
+
+
+

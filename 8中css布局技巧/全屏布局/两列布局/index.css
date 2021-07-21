@@ -1,0 +1,13 @@
+.two-column-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+.two-column-layout .left {
+  width: 100px;
+  background-color: #f66;
+}
+.two-column-layout .right {
+  flex: 1;
+  background-color: #66f;
+}

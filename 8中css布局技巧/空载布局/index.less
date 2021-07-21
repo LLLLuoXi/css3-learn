@@ -1,0 +1,35 @@
+// :empty作用于无子节点的节点，该子节点也包括行内匿名盒(单独的文本内容)。以下三种情况均视为非空状态，若不出现这三种状态则视为空状态，此时:empty才会触发。
+// 仅存在节点：<div><p>CSS</p></div>
+// 仅存在文本：<div>CSS</div>
+// 同时存在节点和文本：<div>Hello <p>CSS</p></div>
+
+
+
+@empty: "https://yangzw.vip/img/empty.svg";
+.empty-layout {
+    overflow: auto;
+    width: 200px;
+    height: 150px;
+    outline: 1px solid #3c9;
+    &:empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(@empty) no-repeat center/100px auto;
+        &::after {
+            margin-top: 90px;
+            font-weight: bold;
+            content: "没钱就没数据";
+        }
+    }
+    li {
+        padding: 0 10px;
+        height: 30px;
+        background-color: #09f;
+        line-height: 30px;
+        color: #fff;
+        &:nth-child(even) {
+            background-color: #f90;
+        }
+    }
+}

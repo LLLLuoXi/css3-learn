@@ -1,0 +1,48 @@
+
+//  :nth-child(n)：选择第n个元素
+//  :nth-child(odd)：选择奇数位置元素，相当于:nth-child(2n-1)
+//  :nth-child(even)：选择偶数位置元素，相当于:nth-child(2n)
+//  :nth-child(xn)：选择第x*n个元素
+//  :nth-child(x-n)：选择前x个元素
+//  :nth-child(y-n):nth-child(n+x)：选择第x~y个元素
+
+// 分析间距布局的一切特点，捕获特征很有利于将特征转换成CSS代码
+
+// A：确定容器间的间距，使用margin声明
+// B：确定容器内的间距，使用padding声明，后续方便声明background-color(该步骤很易与上一步骤混淆，请特别注意)
+// C：确定靠近容器边界的节点与容器的间距，使用padding声明容器而不是使用margin声明节点(该步骤说明上一步骤的处理结果)
+// D：确认每行节点的左右间距，使用margin-left/margin-right(二选一)声明节点
+// E：确认最左列节点或最右列节点与容器的间距，使用margin-left:0声明最左列节点或使用margin-right:0声明最右列节点
+// F：除了首行节点，使用margin-top声明其余节点
+// G：若希望容器顶部底部留空，使用border-top/border-bottom代替padding-top/padding-bottom
+
+.spacing-layout {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    margin-top: 20px; // 对应A
+    padding: 20px; // 对应B和C
+    // padding-top: 0; // 对应G
+    // padding-bottom: 0; // 对应G
+    // border-top: 20px solid #f66; // 对应G
+    // border-bottom: 20px solid #f66; // 对应G
+    width: 700px; // 稍微留空用于显示滚动条
+    height: 400px;
+    background-color: #f66;
+    li {
+        width: 200px;
+        height: 200px;
+        background-color: #66f;
+        line-height: 200px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        &:not(:nth-child(3n)) {  //0 3 6 9
+            margin-right: 20px; // 对应D和E
+        }
+        &:nth-child(n+4) {  //4  5 6 7 8
+            margin-top: 20px; // 对应F
+            // background-color: red;
+        }
+    }
+}

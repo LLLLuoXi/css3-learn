@@ -1,0 +1,40 @@
+.adsorption-position {
+  overflow: auto;
+  position: relative;
+  width: 400px;
+  height: 280px;
+  outline: 1px solid #3c9;
+}
+.adsorption-position ul {
+  padding: 200px 0;
+}
+.adsorption-position li {
+  position: sticky;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.adsorption-position li:nth-child(1) {
+  top: 0;
+  z-index: 9;
+  background-color: #f66;
+}
+.adsorption-position li:nth-child(2) {
+  top: 40px;
+  z-index: 9;
+  background-color: #66f;
+}
+.adsorption-position li:nth-child(3) {
+  background-color: #f90;
+}
+.adsorption-position li:nth-child(4) {
+  bottom: 0;
+  z-index: 9;
+  background-color: #09f;
+}
+.adsorption-position li:nth-child(5) {
+  bottom: 40px;
+  z-index: 9;
+  background-color: #3c9;
+}

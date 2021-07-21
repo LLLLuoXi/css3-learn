@@ -1,0 +1,38 @@
+.three-column-layout {
+  width: 400px;
+  height: 400px;
+}
+.three-column-layout .left {
+  float: left;
+  width: 50px;
+  height: 100%;
+  background-color: #f66;
+}
+.three-column-layout .center {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background-color: #66f;
+}
+.three-column-layout .right {
+  overflow: hidden;
+  height: 100%;
+  background-color: #3c9;
+}
+.three-column-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+.three-column-layout .left {
+  width: 50px;
+  background-color: #f66;
+}
+.three-column-layout .center {
+  width: 100px;
+  background-color: #66f;
+}
+.three-column-layout .right {
+  flex: 1;
+  background-color: #3c9;
+}

@@ -1,0 +1,27 @@
+.fullscreen-layout {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.fullscreen-layout header,
+.fullscreen-layout footer,
+.fullscreen-layout main {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.fullscreen-layout header {
+  top: 0;
+  height: 50px;
+  background-color: #f66;
+}
+.fullscreen-layout footer {
+  bottom: 0;
+  height: 50px;
+  background-color: #66f;
+}
+.fullscreen-layout main {
+  top: 50px;
+  bottom: 50px;
+  background-color: #3c9;
+}

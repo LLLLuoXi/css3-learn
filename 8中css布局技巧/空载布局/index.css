@@ -1,0 +1,27 @@
+.empty-layout {
+  overflow: auto;
+  width: 200px;
+  height: 150px;
+  outline: 1px solid #3c9;
+}
+.empty-layout:empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://yangzw.vip/img/empty.svg") no-repeat center / 100px auto;
+}
+.empty-layout:empty::after {
+  margin-top: 90px;
+  font-weight: bold;
+  content: "没钱就没数据";
+}
+.empty-layout li {
+  padding: 0 10px;
+  height: 30px;
+  background-color: #09f;
+  line-height: 30px;
+  color: #fff;
+}
+.empty-layout li:nth-child(even) {
+  background-color: #f90;
+}

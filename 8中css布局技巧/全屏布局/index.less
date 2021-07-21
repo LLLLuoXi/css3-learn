@@ -1,0 +1,28 @@
+// 三部分统一声明left:0和right:0将其左右满屏拉伸；顶部和底部分别声明top:0和bottom:0将其吸顶和吸底，并声明俩高度为固定值；将主体的top和bottom分别声明为顶部高度和底部高度。通过绝对定位的方式将三部分固定在特定位置，使其互不影响
+.fullscreen-layout {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    header,
+    footer,
+    main {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    header {
+        top: 0;
+        height: 50px;
+        background-color: #f66;
+    }
+    footer {
+        bottom: 0;
+        height: 50px;
+        background-color: #66f;
+    }
+    main {
+        top: 50px;
+        bottom: 50px;
+        background-color: #3c9;
+    }
+}

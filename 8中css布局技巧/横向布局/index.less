@@ -1,0 +1,60 @@
+.horizontal-layout {
+    // overflow: hidden;
+    width: 300px;
+    height: 100px;
+    ul {
+        overflow-x: auto;
+        cursor: pointer;
+        &::-webkit-scrollbar {
+            height: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #f0f0f0;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: #f66;
+        }
+    }
+    li {
+        overflow: hidden;
+        height: 90px;
+        background-color: #66f;
+        line-height: 90px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+}
+//有些同学可能会使用行内元素实现横向排版
+// 但必须声明overflow-y:hidden使容器在Y轴方向隐藏溢出部分。
+// 由于行内元素在当前行排版产生溢出会自动将其余节点排版到下一行，
+// 因此还需声明white-space:nowrap使所有行内元素在一行内排版完毕
+// 。若产生滚动条，还需对容器的height做适当的微调。
+
+.horizontal-layout.inline {
+    height: 102px;
+    ul {
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    li {
+        display: inline-block;
+        width: 90px;
+    }
+}
+
+.horizontal-layout.flex {
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    li {
+        flex-shrink: 0;
+        flex-basis: 90px;
+    }
+}

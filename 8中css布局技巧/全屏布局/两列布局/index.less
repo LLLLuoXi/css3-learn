@@ -1,0 +1,46 @@
+// 左列声明float:left和固定宽度，由于float使节点脱流，右列需声明margin-left为左列宽度，以保证两列不会重叠。
+// .two-column-layout {
+//     width: 400px;
+//     height: 400px;
+//     .left {
+//         float: left;
+//         width: 100px;
+//         height: 100%;
+//         background-color: #f66;
+//     }
+//     .right {
+//         margin-left: 100px;
+//         height: 100%;
+//         background-color: #66f;
+//     }
+// }
+// 左列声明同上，右列声明overflow:hidden使其形成BFC区域与外界隔离。
+// .two-column-layout {
+//     width: 400px;
+//     height: 400px;
+//     .left {
+//         float: left;
+//         width: 100px;
+//         height: 100%;
+//         background-color: #f66;
+//     }
+//     .right {
+//         overflow: hidden;
+//         height: 100%;
+//         background-color: #66f;
+//     }
+// }
+//使用flex实现会更简洁。左列声明固定宽度，右列声明flex:1自适应宽度。
+.two-column-layout {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    .left {
+        width: 100px;
+        background-color: #f66;
+    }
+    .right {
+        flex: 1;
+        background-color: #66f;
+    }
+}

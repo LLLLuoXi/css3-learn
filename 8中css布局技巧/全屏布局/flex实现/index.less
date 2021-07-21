@@ -1,0 +1,31 @@
+.fullscreen-layout {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    header {
+        height: 50px;
+        background-color: #f66;
+    }
+    footer {
+        height: 50px;
+        background-color: #66f;
+    }
+    main {
+        flex: 1;
+        background-color: #3c9;
+        // overflow: auto;
+        div {
+            overflow: hidden;
+            height: 100%;
+        }
+    }
+}
+
+//  若<main>需表现成可滚动状态，千万不要声明overflow:auto让容器自适应滚动，
+// 这样做有可能因为其他格式化上下文的影响而导致自适应滚动失效或产生其他未知效果。
+// 需在<main>内插入一个<div>并声明如下。
+// div {
+//     overflow: hidden;
+//     height: 100%;
+// }

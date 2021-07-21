@@ -1,0 +1,17 @@
+.grail-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+.grail-layout .left {
+  width: 100px;
+  background-color: #f66;
+}
+.grail-layout .center {
+  flex: 1;
+  background-color: #3c9;
+}
+.grail-layout .right {
+  width: 100px;
+  background-color: #66f;
+}

@@ -1,0 +1,41 @@
+.one {
+    background-color: #f66;
+}
+.two {
+    background-color: #66f;
+}
+.three {
+    background-color: #f90;
+}
+.four {
+    background-color: #09f;
+}
+
+// float + width
+// 每列宽度声明为相等的百分比，若有4列则声明width:25%。N列就用公式100 / n求出最终百分比宽度，记得保留2位小数，懒人还可用width:calc(100% / n)自动计算呢。
+
+// .average-layout {
+//     width: 400px;
+//     height: 400px;
+//     div {
+//         float: left;
+//         width: 25%;
+//         height: 100%;
+//     }
+// }
+
+
+// flex
+// 使用flex实现会更简洁。节点声明display:flex后，
+// 生成的FFC容器里所有子节点的高度都相等，
+// 因为容器的align-items默认为stretch，
+// 所有子节点将占满整个容器的高度。
+// 每列声明flex:1自适应宽度。
+.average-layout {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    div {
+        flex: 1;
+    }
+}

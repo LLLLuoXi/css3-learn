@@ -1,0 +1,50 @@
+.horizontal-layout {
+  width: 300px;
+  height: 100px;
+}
+.horizontal-layout ul {
+  overflow-x: auto;
+  cursor: pointer;
+}
+.horizontal-layout ul::-webkit-scrollbar {
+  height: 10px;
+}
+.horizontal-layout ul::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+.horizontal-layout ul::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #f66;
+}
+.horizontal-layout li {
+  overflow: hidden;
+  height: 90px;
+  background-color: #66f;
+  line-height: 90px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.horizontal-layout li:not(:first-child) {
+  margin-left: 10px;
+}
+.horizontal-layout.inline {
+  height: 102px;
+}
+.horizontal-layout.inline ul {
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.horizontal-layout.inline li {
+  display: inline-block;
+  width: 90px;
+}
+.horizontal-layout.flex ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.horizontal-layout.flex li {
+  flex-shrink: 0;
+  flex-basis: 90px;
+}
