@@ -1,0 +1,41 @@
+//选择a元素，并且li元素必须是第一个子元素
+li:first-child{
+    color: crimson;
+}
+// 选中的是子元素中第一个li元素
+li:first-of-type{
+    color: crimson;
+}
+
+li:last-child{
+    color: darkcyan;
+}
+
+// 选中的是子元素中最后一个li元素
+li:last-of-type{
+    color: darkcyan;
+}
+
+// 必须是a元素，必须是第五个子元素
+nav{
+    a:nth-child(5){
+        color: darkorange;
+
+    }
+    a:nth-of-type(5){
+        color: red;
+    }
+    .test{
+        &::first-letter{
+        font-size: 24px;
+        color: red;
+    }
+    &::first-line{
+        background-color: royalblue;
+    }
+    &::selection{
+        color: red;
+        background-color: royalblue;
+    }
+}
+}
