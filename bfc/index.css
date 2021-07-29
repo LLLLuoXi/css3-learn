@@ -1,0 +1,13 @@
+.container {
+  background: #ccc;
+}
+.container img {
+  width: 300px;
+  float: left;
+}
+.container.bfc {
+  overflow: hidden;
+}
+.container .bfc {
+  overflow: hidden;
+}
