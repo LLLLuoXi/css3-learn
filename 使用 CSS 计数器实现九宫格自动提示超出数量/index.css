@@ -1,0 +1,30 @@
+.list {
+  position: relative;
+  display: grid;
+  width: 300px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 0;
+  gap: 2px;
+  counter-reset: count;
+  /*初始化*/
+}
+.list .item {
+  aspect-ratio: 1;
+  /*宽高比1:1*/
+  background-color: grey;
+}
+.list .item::after {
+  counter-increment: count;
+  content: counter(count);
+  display: grid;
+  height: 100%;
+  place-content: center;
+  font-size: 30px;
+  color: #fff;
+}
+.list .item:nth-child(9) ~ .item {
+  /*选择第9个以后的元素*/
+  visibility: hidden;
+}
