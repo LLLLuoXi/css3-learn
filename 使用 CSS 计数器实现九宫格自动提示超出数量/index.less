@@ -1,18 +1,22 @@
-.list{
+.list {
     position: relative;
     display: grid;
     width: 300px;
     margin: auto;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     list-style: none;
     padding: 0;
     gap: 2px;
-    counter-reset: count; /*初始化*/
-    .item{
-        aspect-ratio: 1;/*宽高比1:1*/
+    // counter-reset: count;
+
+    /*初始化*/
+    .item {
+        aspect-ratio: 1;
+        /*宽高比1:1*/
         background-color: grey;
-        &::after{
-            counter-increment: count;
+
+        &::after {
+            // counter-increment: count;
             content: counter(count);
             //其他样式
             display: grid;
@@ -21,9 +25,20 @@
             font-size: 30px;
             color: #fff;
         }
-        &:nth-child(9)~.item{
-            /*选择第9个以后的元素*/
-            visibility: hidden; 
-        }
     }
+
+    .item:nth-child(9)~.item {
+        position: absolute;
+        width: calc(100% / 3 - 1px);
+        counter-increment: count;
+        // visibility: hidden;
+        right: 0;
+        bottom: 0;
+    }
+
+    .item:nth-child(9)~.item:last-child::after {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, .2);
+    }
+
 }
