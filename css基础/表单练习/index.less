@@ -1,0 +1,228 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    line-height: 1.5;
+}
+
+.form {
+    a {
+        color: #00a1d6;
+    }
+
+    width: 980px;
+    margin: 1em auto;
+
+    h2 {
+        text-align: center;
+        font-size: 38px;
+        border-bottom: 1px solid #ddd;
+        height: 30px;
+        margin-bottom: 60px;
+
+        span {
+            background: #fff;
+            padding: 0 20px;
+        }
+    }
+
+    .form-area {
+        width: 423px;
+        margin: 0 auto;
+
+        input[type="text"],
+        input[type="password"] {
+            border: 1px solid #dcdfe6;
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            cursor: pointer;
+            border-radius: 3px;
+            text-indent: 1em;
+            font-size: 14px;
+            color: #606266;
+            font-family: "PingFangSC-Medium";
+
+            &:hover {
+                border-color: #c0c4cc;
+            }
+
+            &::placeholder {
+                color: #ccc;
+            }
+
+            &:focus {
+                border-color: #00a1d6;
+            }
+        }
+
+        .form-item {
+            margin: 50px 0;
+            position: relative;
+
+            .btn-sncode {
+                width: 130px;
+                height: 36px;
+                position: absolute;
+                right: 2px;
+                top: 2px;
+            }
+
+            .select {
+
+                .select-item,
+                .input {
+                    float: left;
+                    height: 40px;
+                }
+
+                .select-item {
+                    width: 140px;
+                    border: 1px solid #dcdfe6;
+                    border-radius: 4px 0 0 4px;
+                    box-sizing: border-box;
+                    position: relative;
+
+                    ul {
+                        max-height: 256px;
+                        background-color: #fff;
+                        color: #606266;
+                        position: absolute;
+                        z-index: 1;
+                        left: 0;
+                        top: 50px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        border: 1px solid #dcdfe6;
+                        border-radius: 4px;
+                        padding: 10px 0;
+                        font-size: 14px;
+                        overflow-y: auto;
+                        display: none;
+
+                        li {
+                            height: 34px;
+                            line-height: 34px;
+                            padding: 0 20px;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #f5f7fa;
+                            }
+
+                            &.active {
+                                color: #00a1d6;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .title {
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 20px;
+                        color: #909399;
+                        border-right: none;
+                    }
+                }
+
+                .input {
+                    width: 283px;
+
+                    input {
+                        border-radius: 0 4px 4px 0;
+
+                    }
+
+                }
+            }
+
+            &.haserror .error {
+                display: block;
+            }
+            &.haserror input {
+                border: 1px solid #f45d90;
+            }
+
+            .error {
+                position: absolute;
+                width: 240px;
+                right: -250px;
+                top: 10px;
+                font-size: 12px;
+                color: #f45d90;
+                display: none;
+
+            }
+        }
+
+        .readme {
+            margin: -40px 0;
+            font-size: 12px;
+
+            .checkbox {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border: 1px solid #dcdfe6;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+            }
+
+            input {
+                display: none;
+
+                &:checked+.checkbox::after {
+                    content: '';
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    background-color: #00a1d6;
+                    border-radius: 50%;
+                    margin-left: 2.5px;
+                    margin-top: 2.5px;
+
+
+
+                }
+
+                &:checked+.checkbox {
+                    border: 1px solid #00a1d6;
+
+                }
+            }
+        }
+    }
+
+    // 同意的按钮样式
+    button {
+        height: 40px;
+        background-color: #00a1d6;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        border: none;
+        font-size: 14px;
+
+        &:hover {
+            background-color: #33b4de;
+        }
+
+        &.fill {
+            width: 100%;
+        }
+        &:disabled{
+            background-color: #f5f5f5;
+            color:rgba(0, 0, 0, .25) ;
+            border: 1px solid #d9d9d9;
+            box-sizing: border-box;
+            cursor: not-allowed;
+        }
+
+    }
+
+}

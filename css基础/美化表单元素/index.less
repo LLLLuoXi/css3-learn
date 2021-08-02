@@ -1,0 +1,39 @@
+.focus {
+    input:focus {
+        outline: 1px solid #008c8c;
+        outline-offset: -1px;
+    }
+
+}
+
+.checked{
+    input:checked +label{
+        color: #008c8c;
+    }
+}
+
+// 自定义单选框样式
+
+.my-radio{
+    .radio{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid #999;
+        cursor: pointer;
+        &.checked{
+            border: 1px solid #008c8c;
+            &::after{
+                display: block;
+                content: '';
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                margin-left: 3.5px;
+                margin-top: 3.5px;
+                background-color: #008c8c;
+
+            }
+        }
+    }
+}

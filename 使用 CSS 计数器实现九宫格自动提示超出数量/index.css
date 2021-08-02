@@ -7,7 +7,6 @@
   list-style: none;
   padding: 0;
   gap: 2px;
-  counter-reset: count;
   /*初始化*/
 }
 .list .item {
@@ -16,7 +15,6 @@
   background-color: grey;
 }
 .list .item::after {
-  counter-increment: count;
   content: counter(count);
   display: grid;
   height: 100%;
@@ -25,6 +23,13 @@
   color: #fff;
 }
 .list .item:nth-child(9) ~ .item {
-  /*选择第9个以后的元素*/
-  visibility: hidden;
+  position: absolute;
+  width: calc(100% / 3 - 1px);
+  counter-increment: count;
+  right: 0;
+  bottom: 0;
+}
+.list .item:nth-child(9) ~ .item:last-child::after {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.2);
 }
