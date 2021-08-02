@@ -2,6 +2,8 @@ ul.pagination {
   float: right;
   padding: 0;
   margin: 0;
+  display: table;
+  word-spacing: -1em;
 }
 ul.pagination li {
   display: inline-block;
