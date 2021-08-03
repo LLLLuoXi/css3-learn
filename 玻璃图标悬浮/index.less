@@ -1,0 +1,71 @@
+/*
+ * @Author: your name
+ * @Date: 2021-08-03 23:49:37
+ * @LastEditTime: 2021-08-04 00:19:40
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \css3-exercise\玻璃图标悬浮\index.less
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,#ff4f8b,#dff1ff);
+    ul{
+        position: relative;
+        display: flex;
+        z-index: 2;
+        li{
+            position: relative;
+            list-style: none;
+            margin: 10px;
+            &:hover{
+                transform: translateY(-20px);
+            }
+            a{
+                position: relative;
+                width: 80px;
+                height: 80px;
+                display: inline-block;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: #fff;
+                font-size: 2em;
+                border: 1px solid rgba(255, 255, 255, .4);
+                border-right: 1px solid rgba(255, 255, 255, .2);
+                border-bottom: 1px solid rgba(255, 255, 255, .2);
+                box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+                transition: 1s;
+                backdrop-filter: blur(2px);
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50px;
+                    height: 100%;
+                    background: rgba(255, 255, 255, 0.5);
+                    transform: skew(45deg) translateX(150px);
+                    transition: 1s;
+                }
+                &:hover::before{
+                    transform: skew(45deg) translateX(-150px);
+                }
+                
+            }
+        }
+    }
+}
