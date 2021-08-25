@@ -1,0 +1,49 @@
+.g-outer {
+    position: relative;
+    width: 650px;
+    height: 340px;
+    background-image: url(../../imgs/image1.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.g-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 0;
+    max-width: 650px;
+    height: 340px;
+    background-image: url(../../imgs/image2.jpg);
+}
+.g-inner:before {
+    content: "↔";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 340px;
+}
+
+.g-resize {
+    position: relative;
+    resize: horizontal;
+    overflow: scroll;
+    width: 0;
+    height: 340px;
+    max-width: 650px;
+    min-width: 15px;
+    animation: opacityChange 3s infinite alternate linear;
+}
+
+@keyframes opacityChange {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

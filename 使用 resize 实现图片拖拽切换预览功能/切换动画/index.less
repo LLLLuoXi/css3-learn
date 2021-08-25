@@ -1,0 +1,39 @@
+.g-outer{
+    width: 650px;
+    height: 340px;
+    background-image: url(../../imgs/image1.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    object-fit: cover;
+}
+.g-inner {
+    height: 340px;
+    background: url(../../imgs/image2.jpg);
+    // animation: widthchange 3s infinite alternate linear;
+    -webkit-mask: linear-gradient(90deg, #fff 0%, #fff 50%, transparent 50%, transparent 100%);
+    -webkit-mask-size: 200% 100%;
+    animation: maskChange 2s infinite alternate linear;
+    // max-width: 640px;
+    // min-width: 10px;
+    // resize: horizontal;
+    // overflow: scroll;
+}
+
+// @keyframes widthchange {
+//     0% {
+//         width: 650px;
+//     }
+//     100% {
+//         width: 0px;
+//     }
+// }
+
+@keyframes maskChange {
+    0% {
+        -webkit-mask-position: -100% 0;
+    }
+    100% {
+        -webkit-mask-position: 0 0;
+    }
+}

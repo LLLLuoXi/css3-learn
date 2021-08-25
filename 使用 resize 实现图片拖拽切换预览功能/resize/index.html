@@ -1,0 +1,34 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-07-30 11:09:22
+ * @LastEditTime: 2021-08-17 15:48:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \css3-exercise\margin负值\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+	<div class="g-outer">
+		<div class="g-inner">
+			<!-- 去除滚动条 -->
+			<!-- 我们将控制拖拽这个功能交给 g-resize，它负责改变元素的宽度，而 g-inner 改为绝对定位，
+				当 g-resize 的宽度增大时，其父元素 g-inner 也会随之增大，
+				最后设置 g-resize 的 opacity 为 0 即可隐藏滚动条。 -->
+			<div class="g-resize"></div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
