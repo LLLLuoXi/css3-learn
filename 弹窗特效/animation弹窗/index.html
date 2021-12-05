@@ -1,0 +1,39 @@
+<!--
+ * @Author: luoxi
+ * @Date: 2021-12-05 12:44:28
+ * @LastEditTime: 2021-12-05 13:39:14
+ * @LastEditors: Please set LastEditors
+ * @Description: 弹窗特效
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./index.css">
+
+<body>
+    <button onclick='show()'>唤起弹窗</button>
+    <div class="popup">
+        我是弹窗
+        <div class="popup close" onclick='hide()'>x</div>
+    </div>
+</body>
+<script>
+    function show() {
+        const popup = document.getElementsByClassName("popup")[0]
+        popup.className += ' isActive'
+    }
+
+
+    function hide() {
+        const popup = document.getElementsByClassName("popup")[0]
+        popup.className = 'popup'
+    }
+</script>
+
+</html>
