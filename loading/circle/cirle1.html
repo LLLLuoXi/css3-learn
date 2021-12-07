@@ -1,0 +1,52 @@
+<!--
+ * @Author: luoxi
+ * @Date: 2021-12-08 00:04:49
+ * @LastEditTime: 2021-12-08 00:12:39
+ * @LastEditors: Please set LastEditors
+ * @Description: cirle1
+ * @FilePath: \css3-exercise\loading\circle\cirle1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loading {
+        width: 30px;
+        height: 30px;
+        border: 2px solid #333;
+        border-top-color: transparent;
+        border-radius: 100%;
+        animation: loading 0.75s linear infinite;
+    }
+    
+    @keyframes loading {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="loading"></div>
+
+</body>
+
+</html>
