@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vh单位  视口高度（vw单位 视口宽度
+  ）*/
+    height: 100vh;
+}
+
+.container {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap 让弹性盒的子元素排不下就换行 */
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 100px;
+    margin: 20px;
+    text-align: center;
+    color: #708090;
+}
+
+.box .img {
+    /* outline: 1px solid; */
+    width: 100px;
+    height: 100px;
+    /*  弹性盒内部的所有元素自动变为块盒 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.2), -18px -18px 30px #fff;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s
+}
+
+.box img {
+    width: 60px;
+}
+
+.box .img:hover {
+    /* box-shadow 过渡的时候 无法从18px 变为 inset内阴影  必须有一个数值变为另一个数值 所以下面先取0让阴影消失 */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 #fff, inset 18px 18px 30px rgba(0, 0, 0, 0.2), inset -18px -18px 30px #fff;
+    transform: scale(0.95);
+    /* 宽高尺寸的变化会到导致页面重新排列 ，scale 只是在视觉上进行放大缩小，实际上是坐标轴的变化 而不是元素的变化*/
+}
+
+.box p {
+    margin-top: 10px;
+}
