@@ -1,13 +1,7 @@
-li:first-child {
-  color: crimson;
-}
 li:first-of-type {
   color: crimson;
 }
 li:last-child {
-  color: darkcyan;
-}
-li:last-of-type {
   color: darkcyan;
 }
 nav a:nth-child(5) {

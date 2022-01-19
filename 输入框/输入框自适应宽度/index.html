@@ -1,55 +1,55 @@
 <!--
  * @Author: your name
  * @Date: 2021-12-05 01:00:06
- * @LastEditTime: 2021-12-05 01:22:30
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-01-19 22:57:37
+ * @LastEditors: your name
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \css3-exercise\输入框自适应宽度\index.html
 -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
+  </head>
+  <style>
     html,
     body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    
+
     input {
-        width: 100%;
-        font-size: 2rem;
-        border: 0;
-        outline: 0;
-        /* text-align: center; */
-        text-decoration: 4px solid underline;
-        /* // 内部尺寸问题 下划线偏移到容器之外 */
-        line-height: 2;
-        text-align: center;
-        text-underline-offset: 10px;
-        background: linear-gradient(currentColor, currentColor) center bottom 6px no-repeat;
-        background-size: 10rem 4px;
+      width: 100%;
+      font-size: 2rem;
+      border: 0;
+      outline: 0;
+      /* text-align: center; */
+      text-decoration: 4px solid underline;
+      /* // 内部尺寸问题 下划线偏移到容器之外 */
+      line-height: 2;
+      /* 由于外面设置的高度并不能影响到内部尺寸，所以内部仍然是默认的高度 ，所以只能用行高line-height来改变高度。行高属于文本属性，可以继承到内部，这样内部尺寸就直接被撑开了，下划线也可见了。 */
+
+      text-align: center;
+      text-underline-offset: 10px;
+      background: linear-gradient(currentColor, currentColor) center bottom 6px
+        no-repeat;
+      background-size: 10rem 4px;
     }
-    
+
     input:focus {
-        text-decoration-color: dodgerblue;
-        background-image: linear-gradient(dodgerblue, dodgerblue)
+      text-decoration-color: dodgerblue;
+      background-image: linear-gradient(dodgerblue, dodgerblue);
     }
-</style>
+  </style>
 
-<body>
-    <input placeholder="请输入...">
-
-</body>
-
+  <body>
+    <input placeholder="请输入..." />
+  </body>
 </html>
