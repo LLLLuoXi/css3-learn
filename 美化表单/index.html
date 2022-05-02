@@ -1,0 +1,75 @@
+<!--
+ * @Author: luoxi
+ * @LastEditTime: 2022-05-02 23:49:18
+ * @LastEditors: your name
+ * @Description: 美化表单
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美化表单</title>
+  </head>
+  <link rel="stylesheet" href="./css/index.css" />
+  <body>
+    <form action="./" class="container">
+      <h1>用户注册</h1>
+      <div class="form-item">
+        <input
+          class="txt"
+          type="text"
+          maxlength="11"
+          placeholder="请输入11位手机号"
+        />
+      </div>
+      <div class="form-item clearfix captcha">
+        <input class="txt left" type="text" placeholder="请填写验证码" />
+        <button class="right" disabled type="button">发送验证码</button>
+      </div>
+      <div class="form-item">
+        <input class="txt" type="text" placeholder="请输入密码" />
+      </div>
+      <div class="form-item">
+        <input class="txt" type="text" placeholder="请再次输入密码" />
+      </div>
+      <div class="form-item">
+        <select class="txt" multiple>
+          <option>爱好1</option>
+          <option>爱好2</option>
+          <option>爱好3</option>
+          <option>爱好4</option>
+          <option>爱好5</option>
+          <option>爱好6</option>
+          <option>爱好7</option>
+          <option>爱好8</option>
+          <option>爱好9</option>
+          <option>爱好10</option>
+        </select>
+      </div>
+      <div class="form-item clearfix">
+        <div class="title left">性別</div>
+        <div class="left">
+          <input type="radio" name="sex" id="male" checked />
+          <label for="male"> 男 </label>
+          <input type="radio" name="sex" id="female" />
+          <label for="female">女</label>
+        </div>
+      </div>
+      <div class="form-item">
+        <textarea class="txt" placeholder="请输入个人简介"></textarea>
+      </div>
+      <div class="form-item">
+        <label>
+          <input type="checkbox" />
+          <span>同意台湾是中国领土不可分割的一部分</span>
+        </label>
+      </div>
+      <div class="form-item policy">
+        <button disabled>立即注册</button>
+        <button type="reset">重置按钮</button>
+      </div>
+    </form>
+  </body>
+</html>
