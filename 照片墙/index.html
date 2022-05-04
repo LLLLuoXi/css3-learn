@@ -1,0 +1,61 @@
+<!--
+ * @Author: luoxi
+ * @LastEditTime: 2022-05-04 23:47:56
+ * @LastEditors: your name
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>照片墙</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>
+          <span>动画</span>
+          <img src="./img/animation.jpg" alt="" />
+        </li>
+        <li>
+          <span>读物</span>
+          <img src="./img/book.jpg" alt="" />
+        </li>
+        <li>
+          <span>设备</span>
+          <img src="./img/device.jpg" alt="" />
+        </li>
+        <li>
+          <span>戏剧</span>
+          <img src="./img/drama.jpg" alt="" />
+        </li>
+        <li>
+          <span>游戏</span>
+          <img src="./img/game.jpg" alt="" />
+        </li>
+        <li>
+          <span>笔记</span>
+          <img src="./img/note.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const arr = ["rot", "top", "sca"];
+      let lis = document.getElementsByTagName("li");
+      for (let i = 0; i < lis.length; i++) {
+        lis[i].addEventListener("mouseenter", function () {
+          const r = Math.floor(Math.random() * arr.length);
+          this.className = arr[r]; //- 当前的类名不能固定
+        });
+        lis[i].addEventListener("mouseleave", function () {
+          this.className = "";
+        });
+      }
+    </script>
+  </body>
+</html>
